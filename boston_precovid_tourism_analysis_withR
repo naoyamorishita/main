@@ -1,0 +1,29 @@
+setwd("C:/Data")
+# setting working directory
+data<-read.csv("economic-indicators.csv")
+# reading downloaded csv file 
+passengers=data $ logan_passengers
+hotel_rate=data$hotel_avg_daily_rate
+# assigning variables
+yearly_passengers=tapply(passengers,data$Year,sum)
+barplot(yearly_passengers,xlab="Y",ylab="Num of Passengers",las=1,yaxp=c(0,50000000,1))
+#sum of passengers of logan airport each year
+plot(passengers,hotel_rate)
+# plotting distribution of number of passengers and hotel rate
+cor(passengers,hotel_rate)
+# correlation constant = 0.7285466
+# meaning strong correlation between number of passengers and hotel rate
+regression<- lm(hotel_rate~passengers,data=data)
+# single regression analysis.
+# explaining variable (x) = number of passengers
+# objective variable (y) = hotel rate
+summary (regression)
+# y= 0.000066*x+45.377122
+abline(regression, lwd=1, col="red")
+# plotting single regression line
+m_regression<-lm(hotel_avg_daily_rate~logan_passengers+logan_intl_flights,data=data)
+#multiple regression analysis
+#explaining variable1 (x_1)= number of passengers
+#explaining variable2 (x_2)=number of intl flights
+#objective variable= hotel rate
+summary(m_regression)
