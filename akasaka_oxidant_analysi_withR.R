@@ -19,6 +19,7 @@ suppressWarnings(as.numeric(oxidant_2019))
 suppressWarnings(as.numeric(oxidant_2020))
 suppressWarnings(oxidant_2020<-as.numeric(oxidant_2020))
 suppressWarnings(oxidant_2019<-as.numeric(oxidant_2019))
+# preventing warning message
 # converting character to numeric values
 oxidant_2019<-oxidant_2019[is.na(oxidant_2019)==F]
 oxidant_2020<-oxidant_2020[is.na(oxidant_2020)==F]
