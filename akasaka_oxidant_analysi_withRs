@@ -20,8 +20,12 @@ oxidant_2019<-oxidant_2019[is.na(oxidant_2019)==F]
 oxidant_2020<-oxidant_2020[is.na(oxidant_2020)==F]
 # removing NA
 summary(oxidant_2019)
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.00   12.00   23.00   23.23   33.00  141.00
 summary(oxidant_2020)
 # summarize data
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 0.00   12.00   23.00   24.25   34.00  164.00 
 install.packages("e1071")
 library(e1071)
 skewness(oxidant_2019)
@@ -35,9 +39,9 @@ kurtosis(oxidant_2020)
 # -0.5 <= skewness and kurtosis <= 0.5
 # oxidant_2019 & oxidant_2020 have normalized distribution
 t.test(oxdant_2019)
-# 95 percent confidence interval: 22.91533 ~ 23.53705
+# mean of 95 percent confidence interval: 22.91533 ~ 23.53705
 t.test(oxidant_2020)
-# 95 percent confidence interval: 23.92414 ~ 24.58189
+# mean of 95 percent confidence interval: 23.92414 ~ 24.58189
 t.test(oxidant_2019,oxidant_2020)
 # t = -4.4478, df = 17124, p-value = 8.731e-06
 # Quantity of Oxidant in 2019 and in 2020 are significantly different
