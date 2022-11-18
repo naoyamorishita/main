@@ -1,3 +1,5 @@
+# MacOS Ventura 13.0.1
+# R 4.1.3 GUI 1.77 Big Sur ARM build (8051)
 setwd("/Users/naoyamorishita/Documents/Data")
 #set directory
 akasaka_2020<-read.csv("akasaka_2020.csv")
