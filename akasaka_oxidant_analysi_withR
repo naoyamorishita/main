@@ -46,6 +46,6 @@ t.test(oxdant_2019)
 # mean of 95 percent confidence interval: 22.91533 ~ 23.53705
 t.test(oxidant_2020)
 # mean of 95 percent confidence interval: 23.92414 ~ 24.58189
-t.test(oxidant_2019,oxidant_2020)
+t.test(oxidant_2019,oxidant_2020,paired=TRUE)
 # t = -4.4478, df = 17124, p-value = 8.731e-06
 # Quantity of Oxidant in 2019 and in 2020 are significantly different
