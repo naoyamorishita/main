@@ -1,0 +1,40 @@
+setwd("/Users/naoyamorishita/Documents/Data")
+#set directory
+akasaka_2020<-read.csv("akasaka_2020.csv")
+akasaka_2019<-read.csv("akasaka_2019.csv")
+oxidant_2019=akasaka_2019$オキシダント
+oxidant_2020=akasaka_2020$オキシダント
+# reading data of oxidant
+head(oxidant_2019)
+head(oxidant_2020)
+# showing 5 lines
+as.numeric(oxidant_2019)
+as.numeric(oxidant_2020)
+oxidant_2020<-as.numeric(oxidant_2020)
+oxidant_2019<-as.numeric(oxidant_2019)
+# converting character to numeric values
+oxidant_2019<-oxidant_2019[is.na(oxidant_2019)==F]
+oxidant_2020<-oxidant_2020[is.na(oxidant_2020)==F]
+# removing NA
+summary(oxidant_2019)
+summary(oxidant_2020)
+# summarize data
+install.packages("e1071")
+library(e1071)
+skewness(oxidant_2019)
+# 0.6683015
+kurtosis(oxidant_2019)
+# 1.473045
+skewness(oxidant_2020)
+# 0.9405804
+kurtosis(oxidant_2020)
+# 2.524676
+# -0.5 <= skewness and kurtosis <= 0.5
+# oxidant_2019 & oxidant_2020 have normalized distribution
+t.test(oxdant_2019)
+# 95 percent confidence interval: 22.91533 ~ 23.53705
+t.test(oxidant_2020)
+# 95 percent confidence interval: 23.92414 ~ 24.58189
+t.test(oxidant_2019,oxidant_2020)
+# t = -4.4478, df = 17124, p-value = 8.731e-06
+# Quantity of Oxidant in 2019 and in 2020 are significantly different
