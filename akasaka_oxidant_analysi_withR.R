@@ -1,6 +1,6 @@
 # MacOS Ventura 13.0.1
 # R 4.1.3 GUI 1.77 Big Sur ARM build (8051)
-# Data:
+# Data (Japanese sites):
 # https://catalog.data.metro.tokyo.lg.jp/dataset/t131032d0000000013/resource/c0ebc62b-5c00-49e7-af2b-f2b5521a46f4
 # https://catalog.data.metro.tokyo.lg.jp/dataset/t131032d0000000013/resource/72af7e6c-f2f9-4263-bb27-0a54a7efb037
 # Downloaded on Nov 17 2022
