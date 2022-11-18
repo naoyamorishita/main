@@ -7,6 +7,7 @@ akasaka_2019<-read.csv("akasaka_2019.csv")
 oxidant_2019=akasaka_2019$オキシダント
 oxidant_2020=akasaka_2020$オキシダント
 # reading data of oxidant
+# "オキシダント" means "oxidant" in Japanese
 head(oxidant_2019)
 head(oxidant_2020)
 # showing 5 lines
