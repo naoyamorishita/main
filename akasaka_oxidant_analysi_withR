@@ -40,7 +40,7 @@ skewness(oxidant_2020)
 # 0.9405804
 kurtosis(oxidant_2020)
 # 2.524676
-# -0.5 <= skewness and kurtosis <= 0.5
+# -0.5 <= "skewness and kurtosis" <= 0.5
 # oxidant_2019 & oxidant_2020 have normalized distribution
 t.test(oxdant_2019)
 # mean of 95 percent confidence interval: 22.91533 ~ 23.53705
