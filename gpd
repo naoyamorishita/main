@@ -1,0 +1,10 @@
+import geopandas as gpd
+data = gpd.read_file(r"/Users/naoyamorishita/Library/CloudStorage/OneDrive-個人用/授業/Clark/Intro to GIS/Final Project/City_of_Boston_Managed_Streets/City_of_Boston_Managed_Streets.shp")
+for i in data["ROUTE_SYST"]:
+    if i=="I" or i=="SR" or i=="US" or i=="R":
+        data["walkable"]=0
+    else:
+        data["walkable"]=1
+data.head()
+walkable=data[data["walkable"]==1]
+walkable.to_file(driver="ESRI Shapefile", filename=r"/Users/naoyamorishita/Library/CloudStorage/OneDrive-個人用/授業/Clark/Intro to GIS/Final Project/City_of_Boston_Managed_Streets/City_of_Boston_Managed_Streets_walkable_2.shp")
