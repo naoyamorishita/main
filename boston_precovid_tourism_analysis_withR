@@ -1,3 +1,4 @@
+#Windows 10 21H2
 setwd("C:/Data")
 # setting working directory
 data<-read.csv("economic-indicators.csv")
@@ -26,4 +27,4 @@ m_regression<-lm(hotel_avg_daily_rate~logan_passengers+logan_intl_flights,data=d
 #explaining variable1 (x_1)= number of passengers
 #explaining variable2 (x_2)=number of intl flights
 #objective variable= hotel rate
-summary(m_regression)
+
