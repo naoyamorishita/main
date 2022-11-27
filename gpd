@@ -15,3 +15,15 @@ data=pd.read_csv(r"/Users/naoyamorishita/Library/CloudStorage/OneDrive-個人用
 data.columns()
 night=data.query("not 6<HOUR<=18")
 night.to_csv(r"Users/naoyamorishita/Library/CloudStorage/OneDrive-個人用/授業/Clark/Intro to GIS/Final Project/crime-incident-reports-2018_night.csv", sep='\t', encoding='utf-8')
+import geopandas as gpd
+data=gpd.read_file(r"/Users/naoyamorishita/Library/CloudStorage/OneDrive-個人用/授業/Clark/Intro to GIS/Final Project/50m_grid_num_lgt_crm_new.shp")
+data_loc=data.loc[:,'CRM_NUM':'LGH_NUM']
+import matplotlib.pyplot as plt
+x=data_loc['LGH_NUM']
+y=data_loc['CRM_NUM']
+plt.scatter(x,y)
+plt.xlabel("Num of Lights")
+plt.ylabel("Num of Crime")
+plt.show()
+corr=data.corr()
+print(corr)
