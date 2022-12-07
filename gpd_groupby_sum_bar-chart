@@ -14,5 +14,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 barchart=df5.plot(kind='bar', ylabel='km^2',
          xlabel='LandUse')
+barchart.tick_params(axis="x", labelrotation=45)
 barchart.set_yticks([10,50,100,1000,1500])
 plt.show()
