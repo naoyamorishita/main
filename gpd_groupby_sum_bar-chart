@@ -1,0 +1,11 @@
+import geopandas as gpd
+df1=gpd.read_file(r"/Volumes/ボリューム/GIS Projects/Selfwork/Florida Bear/Working/landuse_2014-2016_homerange_221130nmorishita_epsg6439_gm_correction.shp")
+df2=df1.loc[:,['LEVEL_1__1','area']]
+print(df2.head())
+df3=df2.groupby('LEVEL_1__1')
+print(df3.sum())
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+plt.xlabel("LandUse",fontsize=8)
+plt.ylabel("Area (m^2)",fontsize=8)
+df3.plot.bar('LEVEL_1__1', color={"area": "red"})
