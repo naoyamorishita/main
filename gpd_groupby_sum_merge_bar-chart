@@ -1,0 +1,43 @@
+#import Geopandas
+#to process shp file
+# df+number-> 2014-16 data
+#df+alphabet-> 1995 data
+import os
+import geopandas as gpd
+import pandas as pd
+os.chdir(r"/Volumes/ボリューム/GIS Projects/Selfwork/Florida Bear/Working/")
+df1=gpd.read_file("landuse_2014-2016_homerange_221130nmorishita_epsg6439_gm_correction.shp")
+df_a=gpd.read_file("landuse_1995_homerange_221130nmorishita_epsg6439_gm_correction.shp")
+#extract level1 landuse & area columns
+df2=df1.loc[:,['LEVEL_1__1','area']]
+df_b=df_a.loc[:,['LEVEL_1__1','area']]
+#reformatting the dataframe
+df2=df2.rename(columns={'LEVEL_1__1':'land_use','area':'sq_km(2014-16)'})
+df2=df2.replace({'Transportation, Communication & Utilities': 'Infra',
+             'Upland Forests':'Forest',
+             'Upland Nonforested':'Soil',
+             'Urban And Built Up':'Urban'})
+df2['sq_km(2014-16)']=df2['sq_km(2014-16)']/1000000
+df_b=df_b.rename(columns={'LEVEL_1__1':'land_use','area':'sq_km(1995)'})
+df_b=df_b.replace({'Transportation, Communication & Utilities': 'Infra',
+             'Upland Forests':'Forest',
+             'Upland Nonforested':'Soil',
+             'Urban And Built Up':'Urban'})
+df_b['sq_km(1995)']=df_b['sq_km(1995)']/1000000
+#check the reformatted dataframe
+print(df2.head())
+print(df_b.head())
+# calculate sum of the area (sqkm)/ land classfication
+df3=df2.groupby('land_use').sum()
+df_c=df_b.groupby('land_use').sum()
+print(df3)
+print(df_c)
+merged=pd.merge(df_c,df3,how="right",on=['land_use'])
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+barchart=merged.plot(kind='bar', ylabel='sq_km',
+         xlabel='LandUse')
+barchart.tick_params(axis="x", labelrotation=45)
+barchart.set_yticks([10,50,100,1000,1500])
+# show the chart
+plt.show()
