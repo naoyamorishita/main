@@ -23,7 +23,7 @@ df2['sq_km(2014-16)']=df2['sq_km(2014-16)']/1000000
 df_b=df_b.rename(columns={'LEVEL_1__1':'land_use','area':'sq_km(1995)'})
 df_b=df_b.replace({'Transportation, Communication & Utilities': 'Infra',
              'Upland Forests':'Forest',
-             'Upland Nonforested':'Soil',
+             'Upland Nonforested':'NonForest',
              'Urban And Built Up':'Urban'})
 df_b['sq_km(1995)']=df_b['sq_km(1995)']/1000000
 #check the reformatted dataframe
@@ -67,7 +67,7 @@ print(df1['LEVEL_1__1'].unique().tolist())
 #df1 to DataFrame
 pd.DataFrame(df1)
 """
-df1['made']=1
+df1['artificial']=1
 can use but take time
 df1.loc[(df1.LEVEL_1__1=="Wetlands")|
         (df1.LEVEL_1__1=='Water')|
@@ -90,9 +90,25 @@ renew_bool=np.asarray([0 if (val=="Wetlands")|
         (val=='Barren Land')
          else 1 for val in landuse_bool])
 # back to df with column title
-df1_copy=pd.DataFrame(renew_bool,columns=['made'])
+df1_copy=pd.DataFrame(renew_bool,columns=['artificial'])
 # assign numbers to each element for merging
 df1_copy['No']=range(1, len(df1_copy.index) + 1)
 df1['No']=range(1, len(df1_copy.index) + 1)
 #merge df1
 df1_integrated=pd.merge(df1,df1_copy,how="right",on=['No'])
+# same operation to 1995 data
+df_a=pd.DataFrame(df_a)
+df_a_copy=df_a['LEVEL_1__1']
+landuse_bool_a=np.array(df_a_copy)
+renew_bool_a=np.asarray([0 if (val=="Wetlands")|
+        (val=='Water')|
+        (val=='Upland Forests')|
+        (val=='Upland Nonforested')|
+        (val=='Barren Land')
+         else 1 for val in landuse_bool_a])
+df_a_copy=pd.DataFrame(renew_bool_a,columns=['artificial'])
+df_a_copy['No']=range(1, len(df_a_copy.index) + 1)
+df_a['No']=range(1, len(df_a_copy.index) + 1)
+df_a_integrated=pd.merge(df_a,df_a_copy,how="right",on=['No'])
+geo_df1=gpd.GeoDataFrame(df1_integrated, geometry='geometry')
+geo_dfa=gpd.GeoDataFrame(df_a_integrated, geometry='geometry')
