@@ -17,7 +17,7 @@ df_b=df_a.loc[:,['LEVEL_1__1','area']]
 df2=df2.rename(columns={'LEVEL_1__1':'land_use','area':'sq_km(2014-16)'})
 df2=df2.replace({'Transportation, Communication & Utilities': 'Infra',
              'Upland Forests':'Forest',
-             'Upland Nonforested':'Soil',
+             'Upland Nonforested':'NonForest',
              'Urban And Built Up':'Urban'})
 df2['sq_km(2014-16)']=df2['sq_km(2014-16)']/1000000
 df_b=df_b.rename(columns={'LEVEL_1__1':'land_use','area':'sq_km(1995)'})
@@ -37,6 +37,7 @@ print(df_c)
 merged=pd.merge(df_c,df3,how="right",on=['land_use'])
 print(merged)
 output=pd.DataFrame(merged)
+# create barchart
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 barchart=merged.plot(kind='bar', ylabel='sq_km',
@@ -58,7 +59,7 @@ tab = table(ax, output, loc='center')
 tab.scale(0.5,1)
 tab.auto_set_font_size(True)
 # save the result
-plt.savefig('table_4.png')
+plt.savefig('table_final.png')
 #assign true(1) or false(0)
 #check column head
 print(df1.columns)
