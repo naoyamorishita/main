@@ -94,7 +94,7 @@ df1_copy=pd.DataFrame(renew_bool,columns=['artificial'])
 # assign numbers to each element for merging
 df1_copy['No']=range(1, len(df1_copy.index) + 1)
 df1['No']=range(1, len(df1_copy.index) + 1)
-#merge df1
+# merge df1
 df1_integrated=pd.merge(df1,df1_copy,how="right",on=['No'])
 # same operation to 1995 data
 df_a=pd.DataFrame(df_a)
@@ -110,5 +110,8 @@ df_a_copy=pd.DataFrame(renew_bool_a,columns=['artificial'])
 df_a_copy['No']=range(1, len(df_a_copy.index) + 1)
 df_a['No']=range(1, len(df_a_copy.index) + 1)
 df_a_integrated=pd.merge(df_a,df_a_copy,how="right",on=['No'])
+# df to shp file
 geo_df1=gpd.GeoDataFrame(df1_integrated, geometry='geometry')
 geo_dfa=gpd.GeoDataFrame(df_a_integrated, geometry='geometry')
+geo_df1.to_file('ed_201x_landuse.shp')
+geo_dfa.to_file('ed_1995_landuse.shp')
