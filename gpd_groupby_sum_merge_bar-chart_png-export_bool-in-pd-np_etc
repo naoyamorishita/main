@@ -45,6 +45,7 @@ barchart.tick_params(axis="x", labelrotation=45)
 barchart.set_yticks([10,50,100,1000,1500])
 # show the chart
 plt.show()
+#save as png
 fig, ax = plt.subplots(figsize=(12, 3)) 
 # no axes
 ax.xaxis.set_visible(False)  
@@ -58,11 +59,16 @@ tab.scale(0.5,1)
 tab.auto_set_font_size(True)
 # save the result
 plt.savefig('table_4.png')
+#assign true(1) or false(0)
+#check column head
 print(df1.columns)
+#check unique elements in a column
 print(df1['LEVEL_1__1'].unique().tolist())
+#df1 to DataFrame
 pd.DataFrame(df1)
-df1['made']=1
 """
+df1['made']=1
+can use but take time
 df1.loc[(df1.LEVEL_1__1=="Wetlands")|
         (df1.LEVEL_1__1=='Water')|
         (df1.LEVEL_1__1=='Upland Forests')|
@@ -70,16 +76,23 @@ df1.loc[(df1.LEVEL_1__1=="Wetlands")|
         (df1.LEVEL_1__1=='Barren Land'),
         df1.made]=0
 """
+#new df only with ['LEVEL_1__1']
 df1_copy=df1['LEVEL_1__1']
+#df1_copy to numpy array
 import numpy as np
 landuse_bool=np.array(df1_copy)
+# if natural convert 0
+# if artificial convert 1
 renew_bool=np.asarray([0 if (val=="Wetlands")|
         (val=='Water')|
         (val=='Upland Forests')|
         (val=='Upland Nonforested')|
         (val=='Barren Land')
          else 1 for val in landuse_bool])
+# back to df with column title
 df1_copy=pd.DataFrame(renew_bool,columns=['made'])
+# assign numbers to each element for merging
 df1_copy['No']=range(1, len(df1_copy.index) + 1)
 df1['No']=range(1, len(df1_copy.index) + 1)
+#merge df1
 df1_integrated=pd.merge(df1,df1_copy,how="right",on=['No'])
