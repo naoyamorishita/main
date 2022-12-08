@@ -5,6 +5,8 @@
 import os
 import geopandas as gpd
 import pandas as pd
+from pandas.plotting import table 
+from tabulate import tabulate
 os.chdir(r"/Volumes/ボリューム/GIS Projects/Selfwork/Florida Bear/Working/")
 df1=gpd.read_file("landuse_2014-2016_homerange_221130nmorishita_epsg6439_gm_correction.shp")
 df_a=gpd.read_file("landuse_1995_homerange_221130nmorishita_epsg6439_gm_correction.shp")
@@ -33,6 +35,8 @@ df_c=df_b.groupby('land_use').sum()
 print(df3)
 print(df_c)
 merged=pd.merge(df_c,df3,how="right",on=['land_use'])
+print(merged)
+output=pd.DataFrame(merged)
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 barchart=merged.plot(kind='bar', ylabel='sq_km',
@@ -41,3 +45,41 @@ barchart.tick_params(axis="x", labelrotation=45)
 barchart.set_yticks([10,50,100,1000,1500])
 # show the chart
 plt.show()
+fig, ax = plt.subplots(figsize=(12, 3)) 
+# no axes
+ax.xaxis.set_visible(False)  
+ax.yaxis.set_visible(False)  
+# no frame
+ax.set_frame_on(False)  
+# plot table
+tab = table(ax, output, loc='center')  
+# set font manually
+tab.scale(0.5,1)
+tab.auto_set_font_size(True)
+# save the result
+plt.savefig('table_4.png')
+print(df1.columns)
+print(df1['LEVEL_1__1'].unique().tolist())
+pd.DataFrame(df1)
+df1['made']=1
+"""
+df1.loc[(df1.LEVEL_1__1=="Wetlands")|
+        (df1.LEVEL_1__1=='Water')|
+        (df1.LEVEL_1__1=='Upland Forests')|
+        (df1.LEVEL_1__1=='Upland Nonforested')|
+        (df1.LEVEL_1__1=='Barren Land'),
+        df1.made]=0
+"""
+df1_copy=df1['LEVEL_1__1']
+import numpy as np
+landuse_bool=np.array(df1_copy)
+renew_bool=np.asarray([0 if (val=="Wetlands")|
+        (val=='Water')|
+        (val=='Upland Forests')|
+        (val=='Upland Nonforested')|
+        (val=='Barren Land')
+         else 1 for val in landuse_bool])
+df1_copy=pd.DataFrame(renew_bool,columns=['made'])
+df1_copy['No']=range(1, len(df1_copy.index) + 1)
+df1['No']=range(1, len(df1_copy.index) + 1)
+df1_integrated=pd.merge(df1,df1_copy,how="right",on=['No'])
