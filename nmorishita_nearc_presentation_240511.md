@@ -23,7 +23,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
     - I calculated the change intensities by municipalities.
         - It would help local governers to balance out conservation and economic development.
 
-[!Conceptual Model](./imgs/nearc_imgs/slide1.jpeg)
+![Conceptual Model](./imgs/nearc_imgs/slide1.jpeg)
 
 ## 2. Data
 - I used 30m regional land cover data from NOAA at the time point of 2006 and 2016. 
@@ -34,7 +34,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 ## 3. Methods
 ### 3.1 Workflow Image
 
-[!Work Flow](./imgs/nearc_imgs/slide3)
+![Work Flow](./imgs/nearc_imgs/slide3)
 
 ### 3.2 What is foreground area intensity (FAD)?
 1. I reclassified the LC layers into 3 categories:
@@ -69,7 +69,7 @@ See this document for the details.
 3. I calculated change intensity, combining all categories for each municipality:
     - **Change intensity = Number of change pixel/ Number of total pixels**
 
-[!Change Intensities](./imgs/nearc_imgs/slide1.jpeg)
+![Change Intensities](./imgs/nearc_imgs/slide1.jpeg)
 
 #### 3.3.2 What is quantity intensity?
 1. Quantity is also called net change.
@@ -82,7 +82,7 @@ See this document for the details.
     - **Loss quantity intensity of *k* = Loss quantity/ Total number of pixel *k* at TP06**
     - **Gain quantity intensity of *j* = Gain quantity/ Total number of pixels of *j* at TP16.**
 
-[!Quantity](./imgs/nearc_imgs/slide5.jpeg)
+![Quantity](./imgs/nearc_imgs/slide5.jpeg)
 
 ### 3.4 What is local Moran's I?
 1. Local moran's I identifies spatial clusters of high and low values, as well as spatial outliers for each record in a vector layer.
@@ -96,14 +96,14 @@ See this webpage for the detail.
 ## 4. Result & Discussion
 1. Looking at the change intensities of the categories, non- forest showed the largest cluster of high intensities of gains in central and western Massachusetts. Western Mass also showed a high cluster of losses, indicating that the area experienced high intensities both of gains and losses. The same was true to fragmented forests in central Mass.
 
-[!Category Intensities](./imgs/nearc_imgs/slide6.jpeg)
+![Category Intensities](./imgs/nearc_imgs/slide6.jpeg)
 
 2.	The change intensity showed large high clusters in central Mass, as well as on Martha’s Vineyard. Nonetheless, Worcester, the 2nd populated city in New England turned out to be spatial outliers. This indicates that the city experienced significantly lower change intensity than its neighbors.
 
-[!Change Intensity](./imgs/nearc_imgs/slide_7.jpeg)
+![Change Intensity](./imgs/nearc_imgs/slide_7.jpeg)
 
 3. Net change intensity, in other words quantity intensity in the western areas ended up high cluster of loss non- forest. This indicates that their losses were larger than their gains. Both the non- forest and fragmented forest gained intensively in central Massachusetts. 
-[!Quantity Intensity](./imgs/nearc_imgs/slide8.jpeg)
+![Quantity Intensity](./imgs/nearc_imgs/slide8.jpeg)
 
 4. From these 3 points, I would conclude that central Mass had been the most subjective to change. Unlike discussion by previous studies, the east Massachusetts, typically outskirts of Boston, ended up low clusters of changes. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
 
