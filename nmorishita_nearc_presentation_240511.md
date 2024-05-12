@@ -5,10 +5,11 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 ## TODO
 - Add citations
 - Check paragraphs
+- Replace blurry images
 
 ## 0. Summary
-1. I analyzed areas' change of fragmented forest, non- fragmented forest, and non- forest during the time interval of 2006 and 2016.
-2. I identified clusters of high change intensities in central MA and Martha's Vineyard.
+1. I only used division, subtraction and local Moran's I for this research to make sure methods are clear for everyone.
+2. I identified clusters of high change intensities in central MA and Martha's Vineyard, not east MA.
 3. Future studies should focus on other land covers that affect connectivity among habitats.
 
 ## 1. Introduction
@@ -74,7 +75,7 @@ See this document for the details.
 #### 3.3.2 What is quantity intensity?
 1. Quantity is also called net change.
 2. This is a change without simultaneous loss and gain among categories.
-    - **Loss quantity of category ** = Number of pixels of *k* at TP06 - Number of pixels of *k* at TP16**
+    - **Loss quantity of category *k* = Number of pixels of *k* at TP06 - Number of pixels of *k* at TP16**
     - **Gain quantity of category *j* = Number of pixels of *j* at 2016 - Number of pixels of *j* at TP06**
         - If the result is negative, then the quantity is zero.
         - If a category have the gain quantity for a municipality, then it is impossible that the category in the municipality have loss quantity more than 0.
