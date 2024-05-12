@@ -34,7 +34,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 ## 3. Methods
 ### 3.1 Workflow Image
 
-![Work Flow](./imgs/nearc_imgs/slide3)
+![Work Flow](./imgs/nearc_imgs/slide3.jpeg)
 
 ### 3.2 What is foreground area intensity (FAD)?
 1. I reclassified the LC layers into 3 categories:
@@ -69,7 +69,7 @@ See this document for the details.
 3. I calculated change intensity, combining all categories for each municipality:
     - **Change intensity = Number of change pixel/ Number of total pixels**
 
-![Change Intensities](./imgs/nearc_imgs/slide1.jpeg)
+![Change Intensities](./imgs/nearc_imgs/slide4.jpeg)
 
 #### 3.3.2 What is quantity intensity?
 1. Quantity is also called net change.
