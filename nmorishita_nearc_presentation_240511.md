@@ -100,7 +100,7 @@ See this webpage for the detail.
 
 2.	The change intensity showed large high clusters in central Mass, as well as on Martha’s Vineyard. Nonetheless, Worcester, the 2nd populated city in New England turned out to be spatial outliers. This indicates that the city experienced significantly lower change intensity than its neighbors.
 
-![Change Intensity](./imgs/nearc_imgs/slide_7.jpeg)
+![Change Intensity](./imgs/nearc_imgs/slide7.jpeg)
 
 3. Net change intensity, in other words quantity intensity in the western areas ended up high cluster of loss non- forest. This indicates that their losses were larger than their gains. Both the non- forest and fragmented forest gained intensively in central Massachusetts. 
 ![Quantity Intensity](./imgs/nearc_imgs/slide8.jpeg)
