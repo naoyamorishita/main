@@ -53,8 +53,6 @@ We calculated the gain intensity and the loss intensity for each category, in ad
 - Gain intensity = **Gain size/ Category size at TP16**
 - Change intensity = **Change size/ Extent size**
 
-![Change Intensities](./imgs/nearc_imgs/slide4.png)
-
 #### 3.3.4 Quantity Intensity of a Category
 Quantity, also called net change, excludes simultaneous gains and losses of a category.
 It is impossible that one category in the extent have both positive loss quantity and positive gain quantity.
@@ -62,8 +60,6 @@ It is impossible that one category in the extent have both positive loss quantit
     - **Loss quantity intensity = Loss quantity/ Category size at TP06**
 - Gain Quantity = MAXIMUM(Gain size - Loss size, 0)
     - **Gain quantity intensity = Gain quantity/ Category size at TP16**
-
-![Quantity](./imgs/nearc_imgs/slide5.png)
 
 ### 3.4 What is local Moran's I?
 I identified clusters containing significantly similar values with neighbors at 5% alpha, as well as spatial outliers (Mitchel, 2009).
