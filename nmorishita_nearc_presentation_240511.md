@@ -78,18 +78,18 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
     - Central Mass shows both high clusters of gains and losses of fragmented forest.
         - These areas experienced high intensities both of gains and losses.
 
-![Category Intensities](./imgs/nearc_imgs/slide6.png)
+![Category Intensities](./imgs/nearc_imgs/slide6.bmp)
 
 2.	Change intensity shows high clusters in central Mass in Martha's Vineyard
     - Nonetheless, Worcester, the 2nd populated city in MA was a spatial outlier.
         - This implies its significantly dissimilar value.
 
-![Change Intensity](./imgs/nearc_imgs/slide7.png)
+![Change Intensity](./imgs/nearc_imgs/slide7.bmp)
 
 3. Net change intensity, in other words quantity intensity in the western areas was high cluster of loss non- forest. 
     - This indicates that their losses were larger than their gains. 
     - Central Mass showed quantity gain intensities of both fragmented forest and non- forest.
-![Quantity Intensity](./imgs/nearc_imgs/slide8.png)
+![Quantity Intensity](./imgs/nearc_imgs/slide8.bmp)
 
 From these 3 points, I would conclude that **central Mass had been the most subjective to change**. Unlike discussion by previous studies, **the outskirts of Bosto and Worcester were low clusters or spatial outlier in the high clustersof the change intensity and non- forest gain quantity**. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
 
