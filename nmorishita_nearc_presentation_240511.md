@@ -29,7 +29,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 FAD is a part of GuidoToolbox (Vogt & Riitters, 2017), and it examines forest fragmentation using a moving window.
 I used the moving window of size of 24km^2, which is close to American black bears' home range (Klamath Inventory & Monitoring Network, 2021).
 If a center pixel is forest, then the FAD is calculated and the value is assigned to the center pixel. 
-    - **FAD = Number of foreground pixels/ Number of total pixels in the moving window.**
+FAD is calculated as **FAD = Number of foreground pixels/ Number of total pixels in the moving window.**
 If the FAD is less than 60%, then the pixel is called fragmented forest (FF). If not, then the pixel is called non- fragmented forest (NFF).
 If a center pixel is not forest, then the value is background, which is called non- forest(NFF).
 See [this documentation](https://ies-ows.jrc.ec.europa.eu/gtb/GTB/psheets/GTB-Fragmentation-FADFOS.pdf) for the detail.
