@@ -9,7 +9,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 
 ## 1. Introduction
 - Massachusetts, especially east MA, experienced forest loss and fragmentation (Blumstein & Thompson, 2015; Rogan, et al., 2016).
-    - There are few studies examined the fragmentation and losses between 2 time points.
+    - There are few studies integrately examined combinedly forest connectivity and area changes between 2 time points.
 - Also, researchers developed a lot of cool tech.
     - However, it is hard to explain and explain.
 
@@ -96,7 +96,7 @@ From these 3 points, I would conclude that **central Mass had been the most subj
 1. How other land cover changed in municipalities? This is because the land cover differently affects behavior of wildlife.
 2. What are potential drivers behind the forest dynamics? One possible driver that I discussed with my supervisor is solar panel installations that typically occurred in central Mass  (Tao, Rogan, Ye, & Geron, 2023).
 3. How do parameters affect the model? For example, what if we change queen contiguity weights into distance- based weights when we do local Moran’s I?
-4. How do the fragmentation and losses affect behavior of the bears in reality? A study revealed increase of nocturnal activity of bears in MA due to urban development (Zeller, Wattles, Bauder, & Destefano, 2020).
+4. How do the fragmentation and losses affect behavior of the bears in reality? A study revealed increase of nocturnal activity of bears in MA due to urban development (Zeller, Wattles, Conlee, & Destefano, 2019).
 
 ## 6. Appendix
 ### 6.1 Key References
@@ -108,6 +108,7 @@ From these 3 points, I would conclude that **central Mass had been the most subj
 - Rogan, J., Write, T. M., Pearsall, H., Ogneva-Himmelberger, Y., Riemann, R., Riitters, K., & Partington, K. (2016). Forest fragmentation in Massachusetts, USA: a town-level assessmentusing Morphological spatial pattern analysis and affinity propagation. GIScience & Remote Sensing, 53(4), 506-519.
 - Tao, S., Rogan, J., Ye, S., & Geron, N. (2023). Mapping Photovoltaic Power Stations and Assessing their Environmental Impacts from Multi-sensor Datasets in Massachusetts. Remote Sensing Applications: Society and Environment, 30, 100937.
 - Vogt, P., & Riitters, K. (2017). GuidosToolbox: universal digital image object analysis. European Journal of Remote Sensing, 50(1), 352-361.
+- Zeller, K. A., Wattles, D. W., Conlee, L., & DeStefano, S. (2019). Black bears alter movements in response to anthropogenic features with time of day and season. Movement Ecology, 7, 1-14.
 
 ### 6.2 Awknowledgement
 I would like to thank Professor John Rogan for his guidance throughout my research.
