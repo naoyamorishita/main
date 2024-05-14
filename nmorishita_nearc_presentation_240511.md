@@ -69,8 +69,7 @@ Note that the "high" and "low" are relative to the mean value (Anselin, 2020).
 See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/h-how-cluster-and-outlier-analysis-anselin-local-m.htm) for the detail.
 
 ## 4. Result & Discussion
-1. Non- forest showed the largest cluster of high intensities of gains in central and western Massachusetts. 
-    - Western Mass also showed a high cluster of losses
+1. Non- forest showed the largest cluster of high intensities of gains in central and losses in western Massachusetts. 
     - Central Mass shows both high clusters of gains and losses of fragmented forest.
         - These areas experienced high intensities both of gains and losses.
 
@@ -82,12 +81,16 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
 
 ![Change Intensity](./imgs/nearc_imgs/change_intensities_total.png)
 
-3. Net change intensity, in other words quantity intensity in the western areas was high cluster of loss non- forest. 
-    - This indicates that their losses were larger than their gains. 
-    - Central Mass showed quantity gain intensities of both fragmented forest and non- forest.
+3. Net change intensity, in other words quantity intensity, Central Mass showed quantity gain intensities of both fragmented forest and non- forest.
+   - This implies that the region experienced forest losses and forest fragmentation collectively and intensively.
+       - Worcester was an outlier of the non- forest gain quantity intensity.
+   - Western Mass showed lots of spatial outliers of losses of non- forest.
+       - This implies dissimilarity of the trends.
+   - East Mass shows a low cluster of non- forest gain quantity intensity.
+       - This implies relatively low intensity of forest loss in the area.    
 ![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
 
-From these 3 points, I would conclude that **central Mass had been the most subjective to change**. Unlike discussion by previous studies, **the outskirts of Bosto and Worcester were low clusters or spatial outlier in the high clustersof the change intensity and non- forest gain quantity**. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
+From these 3 points, I would conclude that **central Mass had been the most subjective to change and forest loss.** Unlike discussion by previous studies, **the outskirts of Bosto and Worcester were low clusters or spatial outlier in the high clustersof the change intensity and non- forest gain quantity**. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
 
 ## 5. Potential Research Questions in the Future
 1. How other land cover changed in municipalities? This is because the land cover differently affects behavior of wildlife.
