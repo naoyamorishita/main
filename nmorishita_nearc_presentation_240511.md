@@ -9,7 +9,7 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 
 ## 1. Introduction
 - Massachusetts, especially east MA, experienced forest loss and fragmentation (Blumstein & Thompson, 2015; Rogan, et al., 2016).
-    - There are few studies integrately examined combinedly forest connectivity and area changes between 2 time points.
+    - There are few studies compared COMBINEDLY forest connectivity and area changes between 2 time points.
 - Also, researchers developed a lot of cool tech.
     - However, it is hard to explain and explain.
 
