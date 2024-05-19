@@ -84,11 +84,8 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
 4. **South central MA belonged to the high cluster of the gain quantity intensity of fragmented forest (Fig 4-4).**
     - Rogan et al. (2016) observed forest fragmentation in and around populous city like Worcester. However, this study found that even towns further away from the city extensively experienced the gain quantity intensity.
 
-*Figure 4-1*
 ![Category Intensities](./imgs/nearc_imgs/moran_glc.png)
-*Figure 4-2*
 ![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
-*Figure 4-3*
 ![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
 
 ## 5. Potential Research Questions in the Future
