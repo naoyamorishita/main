@@ -3,8 +3,8 @@ This will be presented at NEARC Conference on 21st May, 2024 by Naoya Morishita.
 This presentation summarizes a chapter of the presenter's master thesis, submitted to Clark University.
 
 ## 0. Summary
-1. I only used mathematical division, subtraction and local Moran's I for this research to make sure methods are clear for everyone.
-2. I identified clusters of high change intensities and quantity intensity of non- forest in central MA and Martha's Vineyard, not east MA.
+1. I only used mathematical division, subtraction, and local Moran's I to keep simplify methods.
+2. I identified clusters of high change intensity and gain quantity intensity of non- forest in central MA, not east MA.
 3. Future studies should focus on other land covers that affect connectivity among habitats.
 
 ## 1. Introduction
@@ -16,81 +16,80 @@ This presentation summarizes a chapter of the presenter's master thesis, submitt
 ![Conceptual Model](./imgs/nearc_imgs/slide1.png)
 
 ## 2. Data
-- [Land cover from NOAA](https://coast.noaa.gov/digitalcoast/data/ccapregional.html)
+- [30m Land cover from NOAA](https://coast.noaa.gov/digitalcoast/data/ccapregional.html)
     - Time point of 2006 (TP06)
     - Time point of 2016 (TP16)
-- Municipaity boundary from [MassGIS](https://www.mass.gov/info-details/massgis-data-municipalities)
+- [Municipaity boundaries from MassGIS](https://www.mass.gov/info-details/massgis-data-municipalities)
 
 ## 3. Methods
 ### 3.1 Workflow Image
 ![Work Flow](./imgs/nearc_imgs/slide3.png)
 
 ### 3.2 What is foreground area intensity (FAD)?
-FAD is a part of GuidoToolbox (Vogt & Riitters, 2017), and it examines forest fragmentation using a moving window.
-I used the moving window of size of 24km^2, which is close to American black bears' home range (Klamath Inventory & Monitoring Network, 2021).
-If a center pixel is forest, then the FAD is calculated and the value is assigned to the center pixel. 
-FAD is calculated as **FAD = Number of foreground pixels/ Number of total pixels in the moving window.**
-If the FAD is less than 60%, then the pixel is called fragmented forest (FF). If not, then the pixel is called non- fragmented forest (NFF).
-If a center pixel is not forest, then the value is background, which is called non- forest(NFF).
-See [this documentation](https://ies-ows.jrc.ec.europa.eu/gtb/GTB/psheets/GTB-Fragmentation-FADFOS.pdf) for the detail.
+- FAD is one of GuidoToolbox (Vogt & Riitters, 2017) functions, and it examines forest fragmentation using a moving window.
+- The window size was about 24km^2, which was close to American black bears' home range (Klamath Inventory & Monitoring Network, 2021).
+- If a center pixel was forest, then the software calculated FAD and rounded the value.
+- FAD uses the equation of **FAD = Number of foreground pixels/ Number of total pixels in the moving window.**
+- If the FAD was less than 60%, then we called the pixel fragmented forest (FF). 
+- If not, then we called the pixel non- fragmented forest (NFF).
+- If a center pixel is not forest, then the value is background which we called called non- forest(NFF).
+- See [this documentation](https://ies-ows.jrc.ec.europa.eu/gtb/GTB/psheets/GTB-Fragmentation-FADFOS.pdf) for the detail.
 
 ### 3.3 What is change metrics?
-We compared two maps at the TP06 and TP16 using some of the metrices presented by Pontius Jr. (2022).
+We compared the two maps at the TP06 and TP16 using some of the metrices presented by Pontius Jr. (2022).
 
 #### 3.3.1 Terminologies in This Research
-- Extent: The number of pixels in a study area which is area of each municipality.
-- Category size of a category *k*: The number of pixels of *k* at a time point in the extent.
-- Losses of a category *k*: Pixels that were *k* at TP06, but not *k* at TP16.
-- Gains of a category *k*: Pixcels that were not *k* at TP06, but *k* at TP16.
-- Change: Pixels whose categories were different between the time points.
+- **Extent:** The total number of pixels in a study area which is an area of each municipality.
+- **Category size of a category *k*:** The number of pixels of *k* at a given time point in the extent.
+- **Losses of a category *k*:** Pixels that were *k* at TP06, but NOT *k* at TP16.
+- **Gains of a category *k*:** Pixcels that were NOT *k* at TP06, but *k* at TP16.
+- **Change:** Pixels whose categories were different between the time points.
     - The study compared 2 time points' maps, so this is NOT change.
         - A pixel belonged to category *k* at TP06.
         - The pixel changed to another category, and then changed back to the original category *k* by TP16.
 
-#### 3.3.2 Category Intensity & Change Intensity
-We calculated the gain intensity and the loss intensity for each category, in addition to the change intensity for municipality.
+#### 3.3.2 Category Intensity
+We calculated the gain intensity and the loss intensity for each category in each municipality.
 - Loss intensity = **Loss size/ Category size at TP06**
 - Gain intensity = **Gain size/ Category size at TP16**
+
+We also calculated the change intensity in each municipality
 - Change intensity = **Change size/ Extent size**
+
 
 #### 3.3.4 Quantity Intensity of a Category
 Quantity, also called net change, excludes simultaneous gains and losses of a category.
-It is impossible that one category in the extent have both positive loss quantity and positive gain quantity.
+It is impossible that one category in an extent have both positive loss and positive gain quantity.
 - Loss quantity = MAXIMUM(Loss size - Gain size, 0)
     - **Loss quantity intensity = Loss quantity/ Category size at TP06**
 - Gain Quantity = MAXIMUM(Gain size - Loss size, 0)
     - **Gain quantity intensity = Gain quantity/ Category size at TP16**
 
 ### 3.4 What is local Moran's I?
-I identified clusters containing significantly similar values with neighbors at 5% alpha, as well as spatial outliers (Mitchel, 2009).
-Then, comparing with the attribute values, the clusters are labeled either high or low (Mitchel, 2009).
-Note that the "high" and "low" are relative to the mean value (Anselin, 2020).
+- Local Moran's I finds clusters containing significantly similar values (Mitchel, 2009)
+- It also identifies spatial outliers (Mitchel, 2009)
+- We used 5% alpha.
+- Then, the significant clusters were labeled either high or low (Mitchel, 2009).
+- Note that the "high" and "low" were relative to the mean value (Anselin, 2020).
 
 See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/h-how-cluster-and-outlier-analysis-anselin-local-m.htm) for the detail.
 
 ## 4. Result & Discussion
-1. Non- forest showed the largest cluster of high intensities of gains in central and losses in western Massachusetts. 
-    - Central Mass shows both high clusters of gains and losses of fragmented forest.
-        - These areas experienced high intensities both of gains and losses.
+1. **Central MA contained both high clusters of gains and losses of fragmented forest (Fig 4-1).**
+    - The fragmented forest experienced intensive gains and losses in the area. The high clusters basically overlaps with those of the gains of non- forest in central MA.
+2.	**Change intensity showed high clusters in central Mass in Martha's Vineyard (Fig 4-2).**
+    - This indicates that change dynamics among the categories were intensive in these areas. Nonetheless, Worcester, 2nd largest city, was an spatial outlier, low value in high cluser. This implied that the intensity was significantly lower than those of its neighbors.
+3. **"The outskirts of Boston" belonged to low clusters of quantity gain intensity of non- forest (Fig 4-3).**
+    - This disagrees with previous discussion (Blumstein & Thompson, 2015). Instead, central MA contained high clusters of the intensity. This, in turn, implies that quantity loss intensity of forest was higher in this area. Again, Worcester was the spatial outlier. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
+4. **South central MA belonged to the high cluster of the gain quantity intensity of fragmented forest (Fig 4-4).**
+    - Rogan et al. (2016) observed forest fragmentation in and around populous city like Worcester. However, this study found that even towns further away from the city extensively experienced the gain quantity intensity.
 
+*Figure 4-1*
 ![Category Intensities](./imgs/nearc_imgs/moran_glc.png)
-
-2.	Change intensity shows high clusters in central Mass in Martha's Vineyard
-    - Nonetheless, Worcester, the 2nd populated city in MA was a spatial outlier.
-        - This implies its significantly dissimilar value.
-
-![Change Intensity](./imgs/nearc_imgs/change_intensities_total.png)
-
-3. Net change intensity, in other words quantity intensity, Central Mass showed quantity gain intensities of both fragmented forest and non- forest.
-   - This implies that the region experienced forest losses and forest fragmentation collectively and intensively.
-       - Worcester was an outlier of the non- forest gain quantity intensity.
-   - Western Mass showed lots of spatial outliers of losses of non- forest.
-       - This implies dissimilarity of the trends.
-   - East Mass shows a low cluster of non- forest gain quantity intensity.
-       - This implies relatively low intensity of forest loss in the area.    
+*Figure 4-2*
 ![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
-
-From these 3 points, I would conclude that **central Mass had been the most subjective to change and forest loss.** Unlike discussion by previous studies, **the outskirts of Bosto and Worcester were low clusters or spatial outlier in the high clustersof the change intensity and non- forest gain quantity**. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
+*Figure 4-3*
+![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
 
 ## 5. Potential Research Questions in the Future
 1. How other land cover changed in municipalities? This is because the land cover differently affects behavior of wildlife.
