@@ -87,7 +87,7 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
 *Figure 4-1*
 ![Category Intensities](./imgs/nearc_imgs/moran_glc.png)
 *Figure 4-2*
-![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
+![Quantity Intensity](./imgs/nearc_imgs/change_intensities_total.png)
 *Figure 4-3*
 ![Quantity Intensity](./imgs/nearc_imgs/moran_quantity.png)
 
