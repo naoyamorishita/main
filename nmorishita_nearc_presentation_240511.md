@@ -81,7 +81,7 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
     - This indicates that change dynamics among the categories were intensive in these areas. Nonetheless, Worcester, 2nd largest city, was an spatial outlier, low value in high cluser. This implied that the intensity was significantly lower than those of its neighbors.
 3. **"The outskirts of Boston" belonged to low clusters of quantity gain intensity of non- forest (Fig 4-3).**
     - This disagrees with previous discussion (Blumstein & Thompson, 2015). Instead, central MA contained high clusters of the intensity. This, in turn, implies that quantity loss intensity of forest was higher in this area. Again, Worcester was the spatial outlier. This may indicate that its forest change dynamics may no longer be intensive in the area than others. That may make sense if these areas have been already developed enough.
-4. **South central MA belonged to the high cluster of the gain quantity intensity of fragmented forest (Fig 4-4).**
+4. **South central MA belonged to the high cluster of the gain quantity intensity of fragmented forest (Fig 4-3).**
     - Rogan et al. (2016) observed forest fragmentation in and around populous city like Worcester. However, this study found that even towns further away from the city extensively experienced the gain quantity intensity.
 
 ![Category Intensities](./imgs/nearc_imgs/moran_glc.png)
