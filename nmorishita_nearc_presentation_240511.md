@@ -2,6 +2,8 @@
 This will be presented at NEARC Conference on 21st May, 2024 by Naoya Morishita.
 This presentation summarizes a chapter of the presenter's master thesis, submitted to Clark University.
 
+A poster used in my lightning talk can be found [here](./imgs/nearc_imgs/nearc_imgs2/nearc_poster.pdf)!
+
 ## 0. Summary
 1. I only used mathematical division, subtraction, and local Moran's I to keep simplify methods.
 2. I identified clusters of high change intensity and gain quantity intensity of non- forest in central MA, not east MA.
