@@ -2,6 +2,8 @@
 This will be presented at NEARC Conference on 21st May, 2024 by Naoya Morishita.
 This presentation summarizes a chapter of the presenter's master thesis, submitted to Clark University.
 
+A poster used in my lightning talk can be found [here](./imgs/nearc_imgs/nearc_imgs2/nearc_poster.pdf)!
+
 ## 0. Summary
 1. I only used mathematical division, subtraction, and local Moran's I to keep simplify methods.
 2. I identified clusters of high change intensity and gain quantity intensity of non- forest in central MA, not east MA.
@@ -90,7 +92,7 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
 
 ## 5. Potential Research Questions in the Future
 1. How other land cover changed in municipalities? This is because the land cover differently affects behavior of wildlife.
-2. What are potential drivers behind the forest dynamics? One possible driver that I discussed with my supervisor is solar panel installations that typically occurred in central Mass  (Tao, Rogan, Ye, & Geron, 2023).
+2. What are potential drivers behind the forest dynamics? One possible driver that I discussed with my supervisor is solar panel installations that typically occurred in central Mass, especially in Worcester County  (Tao, Rogan, Ye, & Geron, 2023).
 3. How do parameters affect the model? For example, what if we change queen contiguity weights into distance- based weights when we do local Moran’s I?
 4. How do the fragmentation and losses affect behavior of the bears in reality? A study revealed increase of nocturnal activity of bears in MA due to urban development (Zeller, Wattles, Conlee, & Destefano, 2019).
 
@@ -114,4 +116,4 @@ I would like to thank Professor John Rogan for his guidance throughout my resear
 2. I identified clusters of high change intensities and quantity intensity of non- forest in central MA and Martha's Vineyard, not east MA.
 3. Future studies should focus on other land covers that affect connectivity among habitats.
 
-Please send any questions or feedbacks to [my email](mailto:0zh4772g325515u64@gmail) or [my LinkedIn](www.linkedin.com/in/naoya-morishita-705393254). Thank you!
+Please send any questions or feedbacks to [my email](mailto:0zh4772g325515u64@gmail) or [my LinkedIn](https://www.linkedin.com/in/naoya-morishita-705393254/). Thank you!
