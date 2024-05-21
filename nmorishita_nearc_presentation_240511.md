@@ -92,7 +92,7 @@ See [this webpage](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spati
 
 ## 5. Potential Research Questions in the Future
 1. How other land cover changed in municipalities? This is because the land cover differently affects behavior of wildlife.
-2. What are potential drivers behind the forest dynamics? One possible driver that I discussed with my supervisor is solar panel installations that typically occurred in central Mass  (Tao, Rogan, Ye, & Geron, 2023).
+2. What are potential drivers behind the forest dynamics? One possible driver that I discussed with my supervisor is solar panel installations that typically occurred in central Mass, especially in Worcester County  (Tao, Rogan, Ye, & Geron, 2023).
 3. How do parameters affect the model? For example, what if we change queen contiguity weights into distance- based weights when we do local Moran’s I?
 4. How do the fragmentation and losses affect behavior of the bears in reality? A study revealed increase of nocturnal activity of bears in MA due to urban development (Zeller, Wattles, Conlee, & Destefano, 2019).
 
