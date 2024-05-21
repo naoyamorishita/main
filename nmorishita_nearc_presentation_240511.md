@@ -114,4 +114,4 @@ I would like to thank Professor John Rogan for his guidance throughout my resear
 2. I identified clusters of high change intensities and quantity intensity of non- forest in central MA and Martha's Vineyard, not east MA.
 3. Future studies should focus on other land covers that affect connectivity among habitats.
 
-Please send any questions or feedbacks to [my email](mailto:0zh4772g325515u64@gmail) or [my LinkedIn](www.linkedin.com/in/naoya-morishita-705393254). Thank you!
+Please send any questions or feedbacks to [my email](mailto:0zh4772g325515u64@gmail) or [my LinkedIn](https://www.linkedin.com/in/naoya-morishita-705393254/). Thank you!
